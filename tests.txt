@@ -1,0 +1,59 @@
+x canary tests
+
+x get_location returns the time and location that the service returns
+
+x get_location returns a string "service failed to respond" if the service throws an exception
+x get_location returns a string "network error: service unreachable" if the service throws an exception
+
+x get_astronauts returns empty list if service returns empty list
+x get_astronauts returns list with one name if service returns a list with one name
+x get_astronauts returns list with two names if service returns a list with two names already in sorted order
+
+x get_astronauts returns list with two names in sorted order if service returns a list with two names in unsorted order
+
+x get_astronauts returns list with two names in sorted order if service returns a list with two names where the last names are the same but first names are different and in unsorted order
+
+x get_astronauts returns a string "network error: service unreachable" if the service throws an exception
+x get_astronauts returns a string "service failed to respond" if the service throws an exception
+
+x get response returns response from the webservice for astronauts names
+
+x parse response returns astronauts names for ISS from the given sample data
+x parse response returns astronauts names  for ISS from the another sample data
+
+x get astronauts names calls the above two functions
+x get astronauts throws an exception if get response throws an exception
+x get astronauts throws an exception if parse response throws an exception
+
+x get response returns response from the webservice for time and location
+
+x parse response returns timestamp and location from the given sample data
+x parse response returns timestamp and location from the another sample data
+
+x timestamp_to_ct returns formatted time given timestamp
+x timestamp_to_ct returns formatted time given another timestamp
+
+x get location calls the above two functions
+x get location returns the time in CT instead of the time stamp
+
+x get location also returns the place (city/state) of iss
+
+x get location throws an exception if get response throws an exception
+x get location throws an exception if parse response throws an exception
+
+x parse city and state takes address and returns city and state code
+x parse city and state takes another address and returns city and state code
+
+x reverse geocode takes lat and lon and returns the location
+x reverse geocode takes another lat and lon and returns the location
+x reverse geocode takes another lat and lon and returns the unrecognized location
+
+x reverse geocode throws exception if network error happens
+
+
+x Let's write a program to print the details we expect, using the functions we designed so far
+x Let's modify the build so that when we run
+x paver
+ it runs the tests
+x paver run
+ it executes the program.
